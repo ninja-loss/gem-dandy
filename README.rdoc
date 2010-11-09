@@ -1,9 +1,43 @@
 = gem-dandy
 
-Description goes here.
+Utilities to use to manage your gems.
+
+
+== Usage
+
+=== Push To Multiple Profiles On rubygems.org
+
+GemDandy provides facilities to make pushing gems to multiple profiles on rubygems.org easier.  The jeweler
+gem utilizes a config file at ~/.gem/credentials that can only contain a single API key.  GemDandy can manage
+the active API key contained in this configuration.
+
+Configure one or more profiles:
+
+  gemdandy config --profile ninja-loss -key 12345
+
+  gemdandy config --profile midas -key 23456
+
+Use any value for the profile parameter as it is just a name for you to identify the profile.
+
+Confirm the API key(s) are set up correctly:
+
+  gemdandy profile --list            # => ninja-loss: 12345\nmidas: 23456
+
+  gemdandy profile --show ninja-loss #=> ninja-loss: 12345
+
+  gemdandy profile --show ninja-loss #=> midas: 23456
+
+Switch to a specific profile:
+
+  gemdandy profile --switch ninja-loss
+
+Check the active profile:
+
+  gemdandy profile --active
+
 
 == Note on Patches/Pull Requests
- 
+
 * Fork the project.
 * Make your feature addition or bug fix.
 * Add tests for it. This is important so I don't break it in a

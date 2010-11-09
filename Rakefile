@@ -6,11 +6,12 @@ begin
   Jeweler::Tasks.new do |gem|
     gem.name = "gem-dandy"
     gem.summary = %Q{Utilities to use to manage your gems.}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.description = %Q{Enjoy Gem management.}
     gem.email = "ninja-loss@gmail.com"
     gem.homepage = "http://github.com/midas/gem-dandy"
     gem.authors = ["ninja-loss"]
     gem.add_development_dependency "rspec", ">= 1.2.9"
+    gem.add_dependency "trollop", "1.16.2"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new

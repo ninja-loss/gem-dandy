@@ -23,9 +23,9 @@ Confirm the API key(s) are set up correctly:
 
   gemdandy profile --list            # => ninja-loss: 12345\nmidas: 23456
 
-  gemdandy profile --show ninja-loss #=> ninja-loss: 12345
+  gemdandy profile --show ninja-loss # => ninja-loss: 12345
 
-  gemdandy profile --show ninja-loss #=> midas: 23456
+  gemdandy profile --show ninja-loss # => midas: 23456
 
 Switch to a specific profile:
 

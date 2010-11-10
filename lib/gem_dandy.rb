@@ -44,14 +44,14 @@ cmd_opts = case( cmd )
     Trollop::options do
       opt :clear,   "Clear the ~/.gemdandyrc file"
       opt :profile, "The name of the profile",     :type => String
-      opt :key,     "The RubyForge API key",       :type => String
+      opt :key,     "The RubyGems API key",       :type => String
     end
   when "profile"
     Trollop::options do
-      opt :active, "Show the currently active Rubyforge profile"
-      opt :list,   "List all of the configured Rubyforge profiles / API keys"
-      opt :show,   "Show the configured Rubyforge API key for profile <s>",   :type => String, :short => "-z"
-      opt :switch, "Switch the currently active Rubyforge profile to <s>",    :type => String
+      opt :active, "Show the currently active RubyGems profile"
+      opt :list,   "List all of the configured RubyGems profiles / API keys"
+      opt :show,   "Show the configured RubyGems API key for profile <s>",   :type => String, :short => "-z"
+      opt :switch, "Switch the currently active RubyGems profile to <s>",    :type => String
     end
   else
     Trollop::die "unknown command #{cmd.inspect}"

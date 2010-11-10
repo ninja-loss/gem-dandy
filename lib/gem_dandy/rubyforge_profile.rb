@@ -28,7 +28,7 @@ module GemDandy
     end
 
     def display_active_profile
-      report "Active RubyForge Profile: #{current_profile}"
+      report "Active RubyGems Profile: #{current_profile}"
     end
 
     def list_configured_profiles
@@ -38,7 +38,7 @@ module GemDandy
     def show_configured_profile( identifier )
       key = find_api_key( identifier )
       msg = (key.nil? || key.empty?) ?
-        "There is no RubyForge API key configured for the #{identifier} profile" :
+        "There is no RubyGems API key configured for the #{identifier} profile" :
         "#{identifier}: #{key}"
       report msg
     end
@@ -48,10 +48,10 @@ module GemDandy
     end
 
     def switch_profile_to( identifier )
-      report "Switching active RubyForge profile to #{options[:switch]}..."
+      report "Switching active RubyGems profile to #{options[:switch]}..."
       credentials_hash = deployed_key_hash || {}
       unless key = find_api_key( identifier )
-        die "#{identifier} is not a configured RubyForge API profile."
+        die "#{identifier} is not a configured RubyGems API profile."
       end
       credentials_hash.merge!( credentials_key => key )
       remove_credentials_file

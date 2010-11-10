@@ -5,13 +5,13 @@
 
 Gem::Specification.new do |s|
   s.name = %q{gem-dandy}
-  s.version = "0.2.0"
+  s.version = "0.2.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["ninja-loss"]
-  s.date = %q{2010-11-09}
+  s.date = %q{2010-11-10}
   s.default_executable = %q{gemdandy}
-  s.description = %q{Enjoy Gem management.}
+  s.description = %q{Utilities to use to manage your gems.}
   s.email = %q{ninja-loss@gmail.com}
   s.executables = ["gemdandy"]
   s.extra_rdoc_files = [
@@ -32,16 +32,16 @@ Gem::Specification.new do |s|
      "lib/gem_dandy/config_file.rb",
      "lib/gem_dandy/configuration.rb",
      "lib/gem_dandy/output.rb",
-     "lib/gem_dandy/rubyforge_profile.rb",
+     "lib/gem_dandy/rubygems_profile.rb",
      "spec/gem-dandy_spec.rb",
      "spec/spec.opts",
      "spec/spec_helper.rb"
   ]
-  s.homepage = %q{http://github.com/midas/gem-dandy}
+  s.homepage = %q{http://github.com/ninja-loss/gem-dandy}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
-  s.summary = %q{Utilities to use to manage your gems.}
+  s.summary = %q{Enjoy Gem management.}
   s.test_files = [
     "spec/gem-dandy_spec.rb",
      "spec/spec_helper.rb"

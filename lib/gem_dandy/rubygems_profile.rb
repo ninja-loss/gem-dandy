@@ -1,5 +1,5 @@
 module GemDandy
-  class RubyforgeProfile < Command
+  class RubygemsProfile < Command
     include ConfigFile
     include Output
 

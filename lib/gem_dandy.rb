@@ -10,7 +10,7 @@ module GemDandy
   autoload :ConfigFile,       'gem_dandy/config_file'
   autoload :Configuration,    'gem_dandy/configuration'
   autoload :Output,           'gem_dandy/output'
-  autoload :RubyforgeProfile, 'gem_dandy/rubyforge_profile'
+  autoload :RubygemsProfile, 'gem_dandy/rubygems_profile'
 
   VERSION = File.read( "#{File.dirname __FILE__}/../VERSION" ).chomp
 end
@@ -63,5 +63,5 @@ case( cmd )
   when "config"
     GemDandy::Configuration.new( cmd_opts ).perform_action
   when "profile"
-    GemDandy::RubyforgeProfile.new( cmd_opts ).perform_action
+    GemDandy::RubygemsProfile.new( cmd_opts ).perform_action
   end
